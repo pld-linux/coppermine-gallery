@@ -2,7 +2,7 @@
 Summary:	Multi-purpose fully-featured and integrated web picture gallery script
 Name:		coppermine-gallery
 Version:	1.4.5
-Release:	0.6
+Release:	0.8
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/coppermine/cpg%{version}.zip
@@ -70,7 +70,8 @@ install -d $RPM_BUILD_ROOT{%{_appdir},%{_sysconfdir}} \
 	$RPM_BUILD_ROOT/var/lib/%{name}/albums/{edit,userpics}
 
 cp -a *.{php,js,css} $RPM_BUILD_ROOT%{_appdir}
-cp -a albums bridge images include lang logs plugins sql themes $RPM_BUILD_ROOT%{_appdir}
+cp -a bridge images include lang logs plugins sql themes $RPM_BUILD_ROOT%{_appdir}
+ln -s /var/lib/%{name}/albums $RPM_BUILD_ROOT%{_appdir}/albums
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/apache.conf
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/httpd.conf
