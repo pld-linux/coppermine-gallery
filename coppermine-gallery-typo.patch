@@ -1,0 +1,17 @@
+--- cpg145/install.php	2006-05-01 13:05:17.582794094 +0300
++++ cpg145/install.php	2006-05-01 13:29:35.775346224 +0300
+@@ -553,12 +555,12 @@
+     imagecolorallocate ($im, 255, 255, 255);
+     imagejpeg($im, "{$DFLT['alb_d']}/{$DFLT['upl_d']}/gd1.jpg");
+     header("Content-type: image/gif");
+-    fpassthru(fopen('images/spacer.gif'));
++    fpassthru(fopen('images/spacer.gif', 'r'));
+ } elseif ($_GET['test_gd2']) { // GD2 test
+     $im = imagecreatetruecolor(1, 1);
+     imagejpeg($im, "{$DFLT['alb_d']}/{$DFLT['upl_d']}/gd2.jpg");
+     header("Content-type: image/gif");
+-    fpassthru(fopen('images/spacer.gif'));
++    fpassthru(fopen('images/spacer.gif', 'r'));
+ } elseif ($_GET['phpinfo'] && !file_exists($DFLT['lck_f'])) {
+     phpinfo();
+ } else { // The installer
