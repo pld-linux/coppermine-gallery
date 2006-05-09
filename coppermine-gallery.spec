@@ -1,5 +1,6 @@
 %define		_ver %(echo %{version} | tr -d .)
 Summary:	Multi-purpose fully-featured and integrated web picture gallery script
+Summary(pl):	W pe³ni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
 Version:	1.4.5
 Release:	0.8
@@ -15,8 +16,8 @@ BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	php >= 3:4.1.0
 Requires:	php-mysql
 Requires:	webapps
-#Suggests:	php-gd
 #Suggests:	Imagemagick
+#Suggests:	php-gd
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,6 +41,22 @@ are accessible by registered and non-registered users. The site
 administrator can also manage galleries and batch process large
 numbers of pictures that have been uploaded onto the server by FTP.
 
+%description -l pl
+Coppermine Photo Gallery to zaawansowany, przyjazny dla u¿ytkownika
+skrypt do galerii obrazków z wbudowan± obs³ug± innych plików
+multimedialnych lub z danymi.
+
+Galerie mog± byæ prywatne, dostêpne tylko dla zarejestrowanych
+u¿ytkowników i/lub otwarte dla wszystkich go¶ci. U¿ytkownicy, je¶li
+maj± do tego uprawnienia, mog± umieszczaæ obrazki przy u¿yciu swojej
+przegl±darki (miniaturki i obrazki o po¶rednim rozmiarze s± tworzone w
+locie), oceniaæ obrazki, dodawaæ komentarze, a nawet wysy³aæ e-kartki.
+
+Administrator serwisu okre¶la, które z wy¿ej wymienionych opcji s±
+dostêpne dla zarejestrowanych i niezarejestrowanych u¿ytkowników. Mo¿e
+tak¿e zarz±dzaæ galeriami i wsadowo przetwarzaæ du¿± liczbê obrazków
+umieszczonych na serwerze przez FTP.
+
 %package setup
 Summary:	Coppermine Gallery setup package
 Summary(pl):	Pakiet do wstêpnej konfiguracji Coppermine Gallery
@@ -47,14 +64,14 @@ Group:		Applications/WWW
 Requires:	%{name} = %{version}-%{release}
 
 %description setup
-Install this package to configure initial Coppermine Gallery installation. You
-should uninstall this package when you're done, as it considered
-insecure to keep the setup files in place.
+Install this package to configure initial Coppermine Gallery
+installation. You should uninstall this package when you're done, as
+it considered insecure to keep the setup files in place.
 
 %description setup -l pl
-Ten pakiet nale¿y zainstalowaæ w celu wstêpnej konfigurac Coppermine Gallery
-Eventum po pierwszej instalacji. Potem nale¿y go odinstalowaæ, jako ¿e
-pozostawienie plików instalacyjnych mog³oby byæ niebezpieczne.
+Ten pakiet nale¿y zainstalowaæ w celu wstêpnej konfiguracji Coppermine
+Gallery Eventum po pierwszej instalacji. Potem nale¿y go odinstalowaæ,
+jako ¿e pozostawienie plików instalacyjnych mog³oby byæ niebezpieczne.
 
 %prep
 %setup -q -n cpg%{_ver}
