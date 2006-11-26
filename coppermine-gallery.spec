@@ -3,7 +3,7 @@ Summary:	Multi-purpose fully-featured and integrated web picture gallery script
 Summary(pl):	W pe³ni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
 Version:	1.4.5
-Release:	0.8
+Release:	0.9
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/coppermine/cpg%{version}.zip
@@ -13,9 +13,9 @@ Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
 URL:		http://coppermine-gallery.net/
 BuildRequires:	rpmbuild(macros) >= 1.268
-Requires:	php >= 3:4.1.0
-Requires:	php-mysql
+Requires:	php(mysql)
 Requires:	webapps
+Requires:	webserver(php) >= 4.1.0
 #Suggests:	Imagemagick
 #Suggests:	php-gd
 BuildArch:	noarch
