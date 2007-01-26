@@ -21,7 +21,7 @@
            <td width="40%" class="tableb"><b>MySQL table prefix</b><br />(default value is OK; do not use dots!)
            </td>
            <td width="60%" class="tableb" valign="top">
--                  <input type="text" class="textinput" name="table_prefix" value="<?php echo ($_POST['table_prefix'] ? $_POST['table_prefix'] : 'cpg145_') ?>" />
+-                  <input type="text" class="textinput" name="table_prefix" value="<?php echo ($_POST['table_prefix'] ? $_POST['table_prefix'] : 'cpg1410_') ?>" />
 +                  <input type="text" class="textinput" name="table_prefix" value="<?php echo ($_POST['table_prefix'] ? $_POST['table_prefix'] : '') ?>" />
            </td>
           </tr>
@@ -54,14 +54,15 @@
      'sql_d' => 'sql'
 --- cpg145/include/init.inc.php	2006-05-01 13:37:00.735274303 +0300
 +++ cpg145/include/init.inc.php	2006-05-01 13:54:20.578477527 +0300
-@@ -147,8 +147,8 @@
+@@ -150,9 +150,9 @@
  define('CRITICAL_ERROR', 3);
  
  // Include config and functions files
 -if(file_exists('include/config.inc.php')){
--  require_once 'include/config.inc.php';
 +if (file_exists('/etc/webapps/coppermine-gallery/config.inc.php') and filesize('/etc/webapps/coppermine-gallery/config.inc.php') > 0) {
-+  require_once '/etc/webapps/coppermine-gallery/config.inc.php';
+         ob_start();
+-        require_once 'include/config.inc.php';
++	require_once '/etc/webapps/coppermine-gallery/config.inc.php';
+         ob_clean();
  } else {
    // error handling: if the config file doesn't exist go to install
-   die('<html>
