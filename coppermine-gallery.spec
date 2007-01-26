@@ -13,6 +13,7 @@ Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
 URL:		http://coppermine-gallery.net/
 BuildRequires:	rpmbuild(macros) >= 1.268
+BuildRequires:	unzip
 Requires:	php(mysql)
 Requires:	webapps
 Requires:	webserver(php) >= 4.1.0
