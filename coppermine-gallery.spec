@@ -6,9 +6,8 @@ Version:	1.4.10
 Release:	0.1
 License:	GPL v2+
 Group:		Applications/Publishing
-Source0:	http://ovh.dl.sourceforge.net/sourceforge/coppermine/cpg%{version}.zip
+Source0:	http://sourceforge.net/sourceforge/coppermine/cpg%{version}.zip
 # Source0-md5:	928fdeaaea2317329f3c2a5e877f43a4
-# Source0-size:	3214893
 Source1:	%{name}-apache.conf
 Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
