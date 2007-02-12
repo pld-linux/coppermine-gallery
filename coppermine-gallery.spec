@@ -1,6 +1,6 @@
 %define		_ver %(echo %{version} | tr -d .)
 Summary:	Multi-purpose fully-featured and integrated web picture gallery script
-Summary(pl):	W pe³ni funkcjonalny skrypt do galerii obrazków na WWW
+Summary(pl.UTF-8):   W peÅ‚ni funkcjonalny skrypt do galerii obrazkÃ³w na WWW
 Name:		coppermine-gallery
 Version:	1.4.10
 Release:	0.1
@@ -42,25 +42,25 @@ are accessible by registered and non-registered users. The site
 administrator can also manage galleries and batch process large
 numbers of pictures that have been uploaded onto the server by FTP.
 
-%description -l pl
-Coppermine Photo Gallery to zaawansowany, przyjazny dla u¿ytkownika
-skrypt do galerii obrazków z wbudowan± obs³ug± innych plików
+%description -l pl.UTF-8
+Coppermine Photo Gallery to zaawansowany, przyjazny dla uÅ¼ytkownika
+skrypt do galerii obrazkÃ³w z wbudowanÄ… obsÅ‚ugÄ… innych plikÃ³w
 multimedialnych lub z danymi.
 
-Galerie mog± byæ prywatne, dostêpne tylko dla zarejestrowanych
-u¿ytkowników i/lub otwarte dla wszystkich go¶ci. U¿ytkownicy, je¶li
-maj± do tego uprawnienia, mog± umieszczaæ obrazki przy u¿yciu swojej
-przegl±darki (miniaturki i obrazki o po¶rednim rozmiarze s± tworzone w
-locie), oceniaæ obrazki, dodawaæ komentarze, a nawet wysy³aæ e-kartki.
+Galerie mogÄ… byÄ‡ prywatne, dostÄ™pne tylko dla zarejestrowanych
+uÅ¼ytkownikÃ³w i/lub otwarte dla wszystkich goÅ›ci. UÅ¼ytkownicy, jeÅ›li
+majÄ… do tego uprawnienia, mogÄ… umieszczaÄ‡ obrazki przy uÅ¼yciu swojej
+przeglÄ…darki (miniaturki i obrazki o poÅ›rednim rozmiarze sÄ… tworzone w
+locie), oceniaÄ‡ obrazki, dodawaÄ‡ komentarze, a nawet wysyÅ‚aÄ‡ e-kartki.
 
-Administrator serwisu okre¶la, które z wy¿ej wymienionych opcji s±
-dostêpne dla zarejestrowanych i niezarejestrowanych u¿ytkowników. Mo¿e
-tak¿e zarz±dzaæ galeriami i wsadowo przetwarzaæ du¿± liczbê obrazków
+Administrator serwisu okreÅ›la, ktÃ³re z wyÅ¼ej wymienionych opcji sÄ…
+dostÄ™pne dla zarejestrowanych i niezarejestrowanych uÅ¼ytkownikÃ³w. MoÅ¼e
+takÅ¼e zarzÄ…dzaÄ‡ galeriami i wsadowo przetwarzaÄ‡ duÅ¼Ä… liczbÄ™ obrazkÃ³w
 umieszczonych na serwerze przez FTP.
 
 %package setup
 Summary:	Coppermine Gallery setup package
-Summary(pl):	Pakiet do wstêpnej konfiguracji Coppermine Gallery
+Summary(pl.UTF-8):   Pakiet do wstÄ™pnej konfiguracji Coppermine Gallery
 Group:		Applications/WWW
 Requires:	%{name} = %{version}-%{release}
 
@@ -69,10 +69,10 @@ Install this package to configure initial Coppermine Gallery
 installation. You should uninstall this package when you're done, as
 it considered insecure to keep the setup files in place.
 
-%description setup -l pl
-Ten pakiet nale¿y zainstalowaæ w celu wstêpnej konfiguracji Coppermine
-Gallery Eventum po pierwszej instalacji. Potem nale¿y go odinstalowaæ,
-jako ¿e pozostawienie plików instalacyjnych mog³oby byæ niebezpieczne.
+%description setup -l pl.UTF-8
+Ten pakiet naleÅ¼y zainstalowaÄ‡ w celu wstÄ™pnej konfiguracji Coppermine
+Gallery Eventum po pierwszej instalacji. Potem naleÅ¼y go odinstalowaÄ‡,
+jako Å¼e pozostawienie plikÃ³w instalacyjnych mogÅ‚oby byÄ‡ niebezpieczne.
 
 %prep
 %setup -q -n cpg%{_ver}
