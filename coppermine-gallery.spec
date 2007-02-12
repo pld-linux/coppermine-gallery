@@ -1,6 +1,6 @@
 %define		_ver %(echo %{version} | tr -d .)
 Summary:	Multi-purpose fully-featured and integrated web picture gallery script
-Summary(pl.UTF-8):   W pełni funkcjonalny skrypt do galerii obrazków na WWW
+Summary(pl.UTF-8):	W pełni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
 Version:	1.4.10
 Release:	0.1
@@ -60,7 +60,7 @@ umieszczonych na serwerze przez FTP.
 
 %package setup
 Summary:	Coppermine Gallery setup package
-Summary(pl.UTF-8):   Pakiet do wstępnej konfiguracji Coppermine Gallery
+Summary(pl.UTF-8):	Pakiet do wstępnej konfiguracji Coppermine Gallery
 Group:		Applications/WWW
 Requires:	%{name} = %{version}-%{release}
 
