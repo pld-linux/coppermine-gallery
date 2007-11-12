@@ -2,12 +2,12 @@
 Summary:	Multi-purpose fully-featured and integrated web picture gallery script
 Summary(pl.UTF-8):	W pełni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
-Version:	1.4.10
-Release:	0.1
+Version:	1.4.14
+Release:	1
 License:	GPL v2+
 Group:		Applications/Publishing
-Source0:	http://dl.sourceforge.net/coppermine/cpg%{version}.zip
-# Source0-md5:	928fdeaaea2317329f3c2a5e877f43a4
+Source0:	http://dl.sourceforge.net/coppermine/cpg%{_ver}.zip
+# Source0-md5:	17f65c963bb5a6026491f783c59e19bf
 Source1:	%{name}-apache.conf
 Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
@@ -152,10 +152,10 @@ fi
 %{_appdir}/plugins
 %{_appdir}/themes
 
-%dir /var/lib/%{name}
-%dir %attr(770,root,http) /var/lib/%{name}/albums
-%dir %attr(770,root,http) /var/lib/%{name}/albums/edit
-%dir %attr(770,root,http) /var/lib/%{name}/albums/userpics
+%dir %attr(710,root,http) /var/lib/%{name}
+%dir %attr(730,root,http) /var/lib/%{name}/albums
+%dir %attr(730,root,http) /var/lib/%{name}/albums/edit
+%dir %attr(730,root,http) /var/lib/%{name}/albums/userpics
 
 %files setup
 %defattr(644,root,root,755)
