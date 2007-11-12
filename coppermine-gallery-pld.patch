@@ -35,6 +35,17 @@
            </td>
           </tr>
           <tr>
+@@ -472,8 +472,8 @@
+     $sql_query .= "REPLACE INTO CPG_config VALUES ('gallery_admin_email', '{$_POST['admin_email']}');\n";
+     // Test write permissions for main dir
+     if (!is_writable('.')) {
+-        $sql_query .= "REPLACE INTO CPG_config VALUES ('default_dir_mode', '0777');\n";
+-        $sql_query .= "REPLACE INTO CPG_config VALUES ('default_file_mode', '0666');\n";
++        $sql_query .= "REPLACE INTO CPG_config VALUES ('default_dir_mode', '0300');\n";
++        $sql_query .= "REPLACE INTO CPG_config VALUES ('default_file_mode', '0600');\n";
+     }
+     // Update table prefix
+     $sql_query = preg_replace('/CPG_/', $_POST['table_prefix'], $sql_query);
 @@ -536,10 +536,12 @@
  set_magic_quotes_runtime(0);
  // The defaults values
