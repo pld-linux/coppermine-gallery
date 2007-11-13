@@ -3,7 +3,7 @@ Summary:	Multi-purpose fully-featured and integrated web picture gallery script
 Summary(pl.UTF-8):	W pełni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
 Version:	1.4.14
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/coppermine/cpg%{_ver}.zip
@@ -88,7 +88,7 @@ install -d $RPM_BUILD_ROOT{%{_appdir},%{_sysconfdir}} \
 	$RPM_BUILD_ROOT/var/lib/%{name}/albums/{edit,userpics}
 
 cp -a *.{php,js,css} $RPM_BUILD_ROOT%{_appdir}
-cp -a bridge images include lang logs plugins sql themes $RPM_BUILD_ROOT%{_appdir}
+cp -a bridge docs images include lang logs plugins sql themes $RPM_BUILD_ROOT%{_appdir}
 ln -s /var/lib/%{name}/albums $RPM_BUILD_ROOT%{_appdir}/albums
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/apache.conf
@@ -133,7 +133,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc README.txt CHANGELOG docs
+%doc README.txt CHANGELOG
 %dir %attr(750,root,http) %{_sysconfdir}
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/apache.conf
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/httpd.conf
@@ -145,6 +145,7 @@ fi
 %exclude %{_appdir}/install.php
 %{_appdir}/albums
 %{_appdir}/bridge
+%{_appdir}/docs
 %{_appdir}/images
 %{_appdir}/include
 %{_appdir}/lang
