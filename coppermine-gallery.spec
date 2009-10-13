@@ -2,12 +2,12 @@
 Summary:	Multi-purpose fully-featured and integrated web picture gallery script
 Summary(pl.UTF-8):	W pełni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
-Version:	1.4.18
+Version:	1.4.25
 Release:	1
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/coppermine/cpg%{version}.zip
-# Source0-md5:	876c35217a4da4ca2b7edad182628c92
+# Source0-md5:	329eb9e2cb4a56a7f3674312d7031a21
 Source1:	%{name}-apache.conf
 Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
@@ -75,7 +75,7 @@ Gallery Eventum po pierwszej instalacji. Potem należy go odinstalować,
 jako że pozostawienie plików instalacyjnych mogłoby być niebezpieczne.
 
 %prep
-%setup -q -n cpg%{_ver}
+%setup -q -n cpg14x
 rm -f upgrade-1.0-to-1.2.php
 # undos the source
 find '(' -name '*.php' -o -name '*.css' -o -name '*.js' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
