@@ -2,12 +2,12 @@
 Summary:	Multi-purpose fully-featured and integrated web picture gallery script
 Summary(pl.UTF-8):	W pełni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
-Version:	1.4.25
+Version:	1.4.26
 Release:	1
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/coppermine/cpg%{version}.zip
-# Source0-md5:	329eb9e2cb4a56a7f3674312d7031a21
+# Source0-md5:	d990d54a00a1ced9e69fab18a7a554de
 Source1:	%{name}-apache.conf
 Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
