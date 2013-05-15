@@ -3,12 +3,13 @@ Summary:	Multi-purpose fully-featured and integrated web picture gallery script
 Summary(pl.UTF-8):	W pełni funkcjonalny skrypt do galerii obrazków na WWW
 Name:		coppermine-gallery
 Version:	1.4.26
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/coppermine/cpg%{version}.zip
 # Source0-md5:	d990d54a00a1ced9e69fab18a7a554de
 Source1:	%{name}-apache.conf
+Source2:	%{name}-httpd.conf
 Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
 URL:		http://coppermine-gallery.net/
@@ -19,6 +20,7 @@ Requires:	webapps
 Requires:	webserver(php) >= 4.1.0
 #Suggests:	Imagemagick
 #Suggests:	php-gd
+Conflicts:	apache-base < 2.4.0-1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -92,7 +94,7 @@ cp -a bridge docs images include lang logs plugins sql themes $RPM_BUILD_ROOT%{_
 ln -s /var/lib/%{name}/albums $RPM_BUILD_ROOT%{_appdir}/albums
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/apache.conf
-install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/httpd.conf
+install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/httpd.conf
 touch $RPM_BUILD_ROOT%{_sysconfdir}/config.inc.php
 touch $RPM_BUILD_ROOT%{_sysconfdir}/install.lock
 
@@ -125,10 +127,10 @@ fi
 %triggerun -- apache1 < 1.3.37-3, apache1-base
 %webapp_unregister apache %{_webapp}
 
-%triggerin -- apache < 2.2.0, apache-base
+%triggerin -- apache-base
 %webapp_register httpd %{_webapp}
 
-%triggerun -- apache < 2.2.0, apache-base
+%triggerun -- apache-base
 %webapp_unregister httpd %{_webapp}
 
 %files
