@@ -81,8 +81,8 @@ jako że pozostawienie plików instalacyjnych mogłoby być niebezpieczne.
 rm -f upgrade-1.0-to-1.2.php
 # undos the source
 find '(' -name '*.php' -o -name '*.css' -o -name '*.js' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
