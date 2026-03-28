@@ -6,7 +6,7 @@ Version:	1.4.26
 Release:	4
 License:	GPL v2+
 Group:		Applications/Publishing
-Source0:	http://dl.sourceforge.net/coppermine/cpg%{version}.zip
+Source0:	https://downloads.sourceforge.net/coppermine/cpg%{version}.zip
 # Source0-md5:	d990d54a00a1ced9e69fab18a7a554de
 Source1:	%{name}-apache.conf
 Source2:	%{name}-httpd.conf
