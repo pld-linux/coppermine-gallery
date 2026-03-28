@@ -13,7 +13,8 @@ Source2:	%{name}-httpd.conf
 Patch0:		%{name}-typo.patch
 Patch1:		%{name}-pld.patch
 URL:		http://coppermine-gallery.net/
-BuildRequires:	rpmbuild(macros) >= 1.268
+BuildRequires:	rpm-php-pearprov
+BuildRequires:	rpmbuild(macros) >= 1.654
 BuildRequires:	unzip
 Requires:	php(mysql)
 Requires:	webapps
@@ -27,7 +28,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_webapps	/etc/webapps
 %define		_webapp		%{name}
 %define		_sysconfdir	%{_webapps}/%{_webapp}
-%define		_appdir	%{_datadir}/%{_webapp}
+%define		_appdir		%{_datadir}/%{_webapp}
 
 %define		_noautoreq_pear		../.*/.*.php include/.*.php /etc/.* anycontent.php bridge/.*.php lang/.*.php makers/.*.php
 
